@@ -1,6 +1,6 @@
 var StylusCompiler = require('broccoli-stylus-single');
 var path = require('path');
-var checker = require('ember-cli-version-checker');
+var VersionChecker = require('ember-cli-version-checker');
 var mergeTrees = require('broccoli-merge-trees');
 
 function StylusPlugin(optionsFn) {
@@ -51,7 +51,8 @@ module.exports = {
   },
 
   shouldSetupRegistryInIncluded: function() {
-    return !checker.isAbove(this, '0.2.0');
+    var checker = new VersionChecker(this);
+    return !checker.for('ember-cli').isAbove('0.2.0');
   },
 
   setupPreprocessorRegistry: function(type, registry) {

@@ -13,9 +13,9 @@
   "author": "@drewcovi",
   "license": "MIT",
   "dependencies": {
-    "broccoli-merge-trees": "^2.0.0",
-    "broccoli-stylus-single": "^1.0.0",
-    "ember-cli-version-checker": "^1.1.7",
+    "broccoli-merge-trees": "^3.0.1",
+    "broccoli-stylus-single": "github:sergeastapov/broccoli-stylus-single#master",
+    "ember-cli-version-checker": "^2.1.2",
     "stylus": "0.x"
   },
   "repository": {
